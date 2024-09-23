@@ -1,5 +1,5 @@
 #import statement
-from math import sqrt, floor
+from math import sqrt, floor #square root, round down to whole number no matter decimal 
 tiles = int(input())
 
 answer = sqrt(tiles)
