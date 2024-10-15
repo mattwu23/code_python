@@ -1,13 +1,13 @@
-def is_palindrome1(text):
-    '''checks if our given argument is a palindrome
+#def is_palindrome1(text):
+   # '''checks if our given argument is a palindrome
 
-    argument
-        text: an alphabetical based string
+   # argument
+   #     text: an alphabetical based string
 
-    return
-        a boolean value, True if the text is a palindrome, False otherwise
-    '''
-    return text == text[::1]
+    #return
+    #    a boolean value, True if the text is a palindrome, False otherwise
+    #'''
+    #return text == text[::1]
 #end of is_palindrome()
 
 #solution 2: determining the midpoint then checking to see if the other end is the same
@@ -20,8 +20,11 @@ def is_palindrome2(text):
     return
         a boolean value, True if the text is a palindrome, False otherwise
     '''
-    if not text:
-        #text is an empty string
+    if not text:#empty text = false, so if not false then true
+        #base case 1: empty strings are palindromes
+        return True
+    elif len(text)==1:
+        #base case 1: 1 letter is a palindrome
         return True
     elif len(text)<4:
         #for strings with lengths of 1,2,3... as long as the first and last characters are the same 
@@ -44,5 +47,5 @@ def is_palindrome2(text):
                 return False #return in loop is a break
 #end of for loop
         return True
-print(is_palindrome1('tacocat'), is_palindrome2('tacocat'))
-print(is_palindrome1('tacodog'), is_palindrome2('tacodog'))
+#print(is_palindrome1('tacocat'), is_palindrome2('tacocat'))
+#print(is_palindrome1('tacodog'), is_palindrome2('tacodog'))
